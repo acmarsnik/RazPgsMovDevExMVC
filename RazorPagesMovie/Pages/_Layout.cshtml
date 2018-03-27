@@ -10,13 +10,34 @@
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/devextreme/dx.common.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/devextreme/dx.light.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/lib/jquery/dist/jquery.js" asp-append-version="true" />
+        <link rel="stylesheet" href="~/js/devextreme/cldr.js" asp-append-version="true" />
+        <link rel="stylesheet" href="~/js/devextreme/cldr/event.js" asp-append-version="true" />
+        <link rel="stylesheet" href="~/js/devextreme/cldr/supplemental.js" asp-append-version="true" />
+        <link rel="stylesheet" href="~/js/devextreme/cldr/unresolved.js" asp-append-version="true" />
+        <link rel="stylesheet" href="~/js/devextreme/globalize.js" asp-append-version="true" />
+        <link rel="stylesheet" href="~/js/devextreme/globalize/message.js" asp-append-version="true" />
+        <link rel="stylesheet" href="~/js/devextreme/globalize/number.js" asp-append-version="true" />
+        <link rel="stylesheet" href="~/js/devextreme/globalize/currency.js" asp-append-version="true" />
+        <link rel="stylesheet" href="~/js/devextreme/globalize/date.js" asp-append-version="true" />
+        <!-- Uncomment to enable the client-side export feature -->
+        @*<script src="~/js/devextreme/jszip.js"></script>*@
+        <!-- Uncomment to provide geo-data for the VectorMap widget -->
+        @*<script src="~/js/devextreme/vectormap-data/world.js"></script>*@
+        <script src="~/js/devextreme/dx.all.js"></script>
+        <script src="~/js/devextreme/aspnet/dx.aspnet.mvc.js"></script>
+        <script src="~/lib/devextreme-aspnet-data/js/dx.aspnet.data.js"></script>
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        
     </environment>
+
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -49,8 +70,8 @@
     </div>
 
     <environment include="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        @*<script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>*@
         <script src="~/js/site.js" asp-append-version="true"></script>
     </environment>
     <environment exclude="Development">
