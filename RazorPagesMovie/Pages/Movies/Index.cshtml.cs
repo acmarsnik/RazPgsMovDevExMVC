@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using RazorPagesMovie.Models;
 
+
 namespace RazorPagesMovie.Pages.Movies
 {
     public class IndexModel : PageModel
@@ -46,5 +47,6 @@ namespace RazorPagesMovie.Pages.Movies
             Genres = new SelectList(await genreQuery.Distinct().ToListAsync());
             Movie = await movies.ToListAsync();
         }
+
     }
 }
