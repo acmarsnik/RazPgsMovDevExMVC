@@ -23,7 +23,7 @@ namespace RazorPagesMovie.Models
         [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$"), Required, StringLength(30)]
         public string Genre { get; set; }
 
-        [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$"), StringLength(5)]
+        [RegularExpression(@"^(?:1|3|7|a|c|d|e|g|n|o|p|r|v|A|C|D|E|G|N|O|P|R|V|-)*$"), StringLength(8)]
         public string Rating { get; set; }
     }
 }
