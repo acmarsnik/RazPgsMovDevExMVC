@@ -4,16 +4,35 @@
     ViewData["Title"] = "RpMovieDECustMethod";
 }
 
-<h2>Razor Pages Movie (Dev Extreme -Custom Method)</h2>
+<h2>Razor Page</h2>
+<h4>Data Source: Local Movie DB</h4>
+<h4>
+    Data Access Method:
+    <br /> <br />
+    Html.DevExtreme().DataGrid() <br />
+    &emsp;.DataSource(ds => ds <br />
+    &emsp;.Mvc() <br />
+    &emsp;.Controller("IndexDEController") <br />
+    &emsp;.Key("ID") <br />
+    &emsp;.LoadAction("GetMovies2") <br />
+    &emsp;.InsertAction("InsertMovie") <br />
+    &emsp;.UpdateAction("UpdateMovie") <br />
+    &emsp;.DeleteAction("DeleteMovie") <br />
+    )
+    <br />
+</h4>
+<h4>Display: Dev Extreme Data Grid</h4>
+<h4>Other Info: None</h4>
+<br /> <br />
 
 @(Html.DevExtreme().DataGrid()
-                                                                    .DataSource(ds => ds
-                                                                .Mvc()
-                                                                .Controller("IndexDEController")
-                                                                .Key("ID")
-                                                                .LoadAction("GetMovies2")
-                                                                .InsertAction("InsertMovie")
-                                                                .UpdateAction("UpdateMovie")
-                                                                .DeleteAction("DeleteMovie")
-                                                            )
+                                                                            .DataSource(ds => ds
+                                                                        .Mvc()
+                                                                        .Controller("IndexDEController")
+                                                                        .Key("ID")
+                                                                        .LoadAction("GetMovies2")
+                                                                        .InsertAction("InsertMovie")
+                                                                        .UpdateAction("UpdateMovie")
+                                                                        .DeleteAction("DeleteMovie")
+                                                                    )
 )   

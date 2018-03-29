@@ -1,0 +1,113 @@
+﻿@page
+@model RazorPagesMovie.Pages.DataGrids.RpAbmcDEFlatDGModel
+@{
+    ViewData["Title"] = "RpAbmcDEFlatDG";
+}
+
+<h2>Razor Page</h2>
+<h4>Data Source: Flat Autobid Mechanical JSON File Stored <a href="https://www.jasonbase.com/things/jWne.json" target="_blank">Here</a> </h4>
+<h4>
+    Data Access Method:
+    <br /> <br />
+    .DataSource("<a href="https://www.jasonbase.com/things/jWne.json" target="_blank">https://www.jasonbase.com/things/jWne.json</a>", "TrimbleItemId")
+</h4>
+<br />
+<h4>Display: Dev Extreme Data Grid</h4>
+<h4>Other Info: None</h4>
+<br /> <br />
+
+@(Html.DevExtreme().DataGrid<RazorPagesMovie.Models.DrawFromAbmc>
+                        ()
+                        .Columns(columns =>
+                        {
+                            columns.AddFor(d => d.TrimbleItemId);
+                            columns.AddFor(d => d.Name);
+                            columns.AddFor(d => d.FittingCategory);
+                            columns.AddFor(d => d.FittingType);
+                            columns.AddFor(d => d.ContributorItemDetail1ContributorId);
+                            columns.AddFor(d => d.ContributorItemDetail1Id);
+                            columns.AddFor(d => d.ContributorItemDetail1InsulationThickness);
+                            columns.AddFor(d => d.ContributorItemDetail1LinerThickness);
+                            columns.AddFor(d => d.ContributorItemDetail1LocationX);
+                            columns.AddFor(d => d.ContributorItemDetail1LocationY);
+                            columns.AddFor(d => d.ContributorItemDetail1LocationZ);
+                            columns.AddFor(d => d.ContributorItemDetail1ModelChangeChangeId);
+                            columns.AddFor(d => d.ContributorItemDetail1ModelChangeId);
+                            columns.AddFor(d => d.ContributorItemDetail1ModelChangeTimeOfChange);
+                            columns.AddFor(d => d.ContributorItemDetail1ModelChangeUserSessionId);
+                            columns.AddFor(d => d.ContributorItemDetail1ModelChangeVersion);
+                            columns.AddFor(d => d.ContributorItemDetail1PricingDiscountMultiplier);
+                            columns.AddFor(d => d.ContributorItemDetail1PricingPikcCode);
+                            columns.AddFor(d => d.ContributorItemDetail1PricingPrice);
+                            columns.AddFor(d => d.ContributorItemDetail1PricingPriceCode);
+                            columns.AddFor(d => d.ContributorItemDetail1PricingQuantity);
+                            columns.AddFor(d => d.ContributorItemDetail1PricingTotalLaborCost);
+                            columns.AddFor(d => d.ContributorItemDetail1PricingTotalLaborHours);
+                            columns.AddFor(d => d.ContributorItemDetail1PricingUpcCode);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesTakeOffLineNum);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesMetric);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesAuditTrailID);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesAttachedToID);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesIsAttachedFrom);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesVertical);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesX);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesY);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesPipeX);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesPipeY);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesSizeStrPropane);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesDrawingDrawing);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesAlternate);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesZone);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesSymbol);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesLine);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesReportCat);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesSpec);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesMaterialName);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesWeight);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesTradeFitters);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesLocation);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborField);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborField_x0020__x0020_Shop);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborShop);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborField_x0020_Mat_x0020_Handling0);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborShop_x0020_Mat_x0020_Handling0);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborField_x0020_Mat_x0020_No_x0020_shop0);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborLabor_x0020_Cat_x0020_70);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborLabor_x0020_Cat_x0020_80);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingDiscountMultiplier1);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingPikcCode);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingPrice);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingPriceCode);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingQuantity);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingTotalLaborCost);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingTotalLaborHours);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingUpcCode);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesScopesSystem);
+                            columns.AddFor(d => d.ContributorItemDetail1PropertiesScopesFloor);
+                            columns.AddFor(d => d.ContributorItemDetail1ScopesSystem);
+                            columns.AddFor(d => d.ContributorItemDetail1ScopesFloor);
+                            columns.AddFor(d => d.ContributorItemDetail1TypeOfChange);
+                            columns.AddFor(d => d.ContributorItemDetail1Units);
+                            columns.AddFor(d => d.Version);
+                        })
+                        .DataSource("https://www.jasonbase.com/things/jWne.json", "TrimbleItemId")
+                        .ColumnChooser(c => c.Enabled(true))
+                        .AllowColumnReordering(true)
+                        .AllowColumnResizing(true)
+                        .ColumnAutoWidth(true)
+                        .Option("columnResizingMode", "widget")
+                        .Option("showColumnLines", true)
+                        .Option("showRowLines", true)
+                        .Option("showRowBorders", true)
+                        .Option("rowAlternationEnabled", true)
+
+    //Uncomment to turn infinite scrolling on
+    //.Scrolling(scrolling => scrolling.Mode(GridScrollingMode.Infinite))
+
+    //Flat ABMC Data Source
+    //https://www.jasonbase.com/things/jWne.json
+
+    //Edit Flat Data Source
+    //https://www.jasonbase.com/things/jWne/edit#
+
+)

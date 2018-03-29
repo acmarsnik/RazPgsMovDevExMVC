@@ -1,0 +1,22 @@
+﻿@page
+@model RazorPagesMovie.Pages.DataGrids.RpRandomJsonDataDEEx1DGModel
+@{
+    ViewData["Title"] = "RpRandomJsonDataDEEx1DG";
+}
+
+<h2>RpRandomJsonDataDEEx1DG</h2>
+<br /> <br />
+
+@(Html.DevExtreme().DataGrid<RazorPagesMovie.Models.RandomExample>()
+                                                        .Columns(columns =>
+                                                        {
+                                                            columns.AddFor(re => re.userId);
+                                                            columns.AddFor(re => re.id);
+                                                            columns.AddFor(re => re.title);
+                                                            columns.AddFor(re => re.body);
+                                                        })
+                                                        .DataSource(ds => ds
+                                    .StaticJson()
+                                    .Url("https://jsonplaceholder.typicode.com/posts")
+                                )
+)
