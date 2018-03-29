@@ -15,7 +15,7 @@ namespace RazorPagesMovie.Pages.Movies
     {
         private readonly MovieContext _context;
 
-        public IndexModel(RazorPagesMovie.Models.MovieContext context)
+        public IndexModel(MovieContext context)
         {
             _context = context;
         }

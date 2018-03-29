@@ -19,19 +19,6 @@
                                                 .DataSource(RazorPagesMovie.Pages.Movies.IndexDEController.movies)
 )
 
-
-@(Html.DevExtreme().DataGrid()
-                                                                .DataSource(ds => ds
-                                                            .Mvc()
-                                                            .Controller("IndexDEController")
-                                                            .Key("ID")
-                                                            .LoadAction("GetMovies2")
-                                                        //.InsertAction("InsertMovie")
-                                                        //.UpdateAction("UpdateMovie")
-                                                        //.DeleteAction("DeleteMovie")
-                                                        )
-)
-
 @(Html.DevExtreme().DataGrid<RazorPagesMovie.Models.RandomExample>()
                                                 .Columns(columns =>
                                                 {

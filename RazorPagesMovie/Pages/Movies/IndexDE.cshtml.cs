@@ -17,27 +17,7 @@ namespace RazorPagesMovie.Pages.Movies
 {
     public class IndexDEController : Microsoft.AspNetCore.Mvc.Controller
     {
-        private readonly RazorPagesMovie.Models.MovieContext _context;
-        public static DataTable dataTableEx = new DataTable();
-        public static List<DrawFromAbmc> abmcList = new List<DrawFromAbmc>();
-
-        public static string jsonAbmc;
-
-        public IList<Movie> Movie { get; set; }
-        const string ValidationErrorMessage = "The record cannot be saved due to a validation error";
-
-        // Requires using Microsoft.AspNetCore.Mvc.Rendering;
-        public async Task OnGetAsync()
-        {
-
-            var movies = from m in _context.Movie
-                         select m;
-
-            Movie = await movies.ToListAsync();
-
-
-    }
-        //Fetching items from the "Movie" collection
+        //Creating Static List of Movies
         public static List<Movie> movies { get; set; } = new List<Movie> {
             new Movie() { ID = 1, Title = "The Shawshank Redemption" , Genre="Drama", Price=7.43M, Rating = "R", ReleaseDate = new DateTime(1994, 10, 14)},
             new Movie() { ID = 2, Title = "The Godfather" , Genre="Crime", Price=6.52M, Rating = "R", ReleaseDate = new DateTime(1972, 03, 24) },
@@ -47,50 +27,5 @@ namespace RazorPagesMovie.Pages.Movies
             new Movie() { ID = 6, Title = "Schindler's List" , Genre="Biography", Price=5.90M, Rating = "R", ReleaseDate = new DateTime(1994, 02, 04)  },
             new Movie() { ID = 7, Title = "The Lord of the Rings: The Return of the King" , Genre="Adventure", Price=3.68M, Rating = "PG-13", ReleaseDate = new DateTime(2003, 12, 17)  }
         };
-
-        
-        
-
-        public Microsoft.AspNetCore.Mvc.ActionResult GetMovies(DataSourceLoadOptions loadOptions)
-        {
-            var result = DataSourceLoader.Load(movies, loadOptions);
-            var resultJson = JsonConvert.SerializeObject(result);
-            return Content(resultJson, "application/json");
-        }
-
-        public object GetMovies2(DataSourceLoadOptions loadOptions)
-        {
-            return DataSourceLoader.Load(_context.Movie, loadOptions);
-        }
-
-        //// Inserting a new item into the "Movie" collection
-        //public ActionResult InsertMovie(string values)
-        //{
-        //    var newMovie = new Movie();                             // Creating a new item
-        //    JsonConvert.PopulateObject(values, newMovie);           // Populating the item with the values
-        //    if (!TryValidateModel(newMovie))                        // Validating the item
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest, ValidationErrorMessage);
-        //    _context.Movie.Add(newMovie);                            // Adding the item to the database
-        //    _context.SaveChanges();
-        //    return new HttpStatusCodeResult(HttpStatusCode.OK);
-        //}
-        //// Updating an item in the "Movie" collection
-        //public ActionResult UpdateMovie(int key, string values)
-        //{
-        //    var movie = _context.Movie.First(m => m.ID == key); // Finding the item to be updated by key
-        //    JsonConvert.PopulateObject(values, movie);              // Populating the found item with the changed values
-        //    if (!TryValidateModel(movie))                           // Validating the updated item
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest, ValidationErrorMessage);
-        //    _context.SaveChanges();
-        //    return new HttpStatusCodeResult(HttpStatusCode.Created);
-        //}
-
-        //// Removing an item from the "Movie" collection
-        //public void DeleteMovie(int key)
-        //{
-        //    var movie = _context.Movie.First(m => m.ID == key); // Finding the item to be removed by key
-        //    _context.Movie.Remove(movie);                            // Removing the found item
-        //    _context.SaveChanges();
-        //}
     }
 }

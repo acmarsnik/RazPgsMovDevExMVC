@@ -28,20 +28,23 @@ namespace RazorPagesMovie
                     context.Database.Migrate();
                     // Requires using RazorPagesMovie.Models;
                     SeedData.Initialize(services);
-                    foreach(Movie m in context.Movie)
-                    {
-                        Console.WriteLine(' ');
-                        Console.WriteLine("**********************************************************************************************************************************************************");
-                        Console.WriteLine(' ');
-                        Console.WriteLine(m.ID.ToString());
-                        Console.WriteLine(m.Price.ToString());
-                        Console.WriteLine(m.Rating.ToString());
-                        Console.WriteLine(m.ReleaseDate.ToString());
-                        Console.WriteLine(m.Title.ToString());
-                        Console.WriteLine(' ');
-                        Console.WriteLine("**********************************************************************************************************************************************************");
-                        Console.WriteLine(' ');
-                    }
+                    
+                    //Print all info about Movies in DB
+                    //foreach (Movie m in context.Movie)
+                    //{
+                    //    Console.WriteLine(' ');
+                    //    Console.WriteLine("**********************************************************************************************************************************************************");
+                    //    Console.WriteLine(' ');
+                    //    Console.WriteLine("ID: " + m.ID.ToString());
+                    //    Console.WriteLine("Title: " + m.Title.ToString());
+                    //    Console.WriteLine("Release Date: " + m.ReleaseDate.ToString());
+                    //    Console.WriteLine("Price: " + m.Price.ToString());
+                    //    Console.WriteLine("Genre: " + m.Genre.ToString());
+                    //    Console.WriteLine("Rating: " + m.Rating.ToString());
+                    //    Console.WriteLine(' ');
+                    //    Console.WriteLine("**********************************************************************************************************************************************************");
+                    //    Console.WriteLine(' ');
+                    //}
                 }
                 catch (Exception ex)
                 {
