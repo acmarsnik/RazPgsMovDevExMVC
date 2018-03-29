@@ -7,151 +7,159 @@
 <h2>IndexDE</h2>
 
 @(Html.DevExtreme().DataGrid<RazorPagesMovie.Models.Movie>()
-                                            .Columns(columns =>
-                                            {
-                                                columns.AddFor(m => m.ID);
-                                                columns.AddFor(m => m.Title);
-                                                columns.AddFor(m => m.ReleaseDate);
-                                                columns.AddFor(m => m.Price);
-                                                columns.AddFor(m => m.Genre);
-                                                columns.AddFor(m => m.Rating);
-                                            })
-                                            .DataSource(RazorPagesMovie.Pages.Movies.IndexDEController.movies)
+                                                .Columns(columns =>
+                                                {
+                                                    columns.AddFor(m => m.ID);
+                                                    columns.AddFor(m => m.Title);
+                                                    columns.AddFor(m => m.ReleaseDate);
+                                                    columns.AddFor(m => m.Price);
+                                                    columns.AddFor(m => m.Genre);
+                                                    columns.AddFor(m => m.Rating);
+                                                })
+                                                .DataSource(RazorPagesMovie.Pages.Movies.IndexDEController.movies)
 )
 
 
 @(Html.DevExtreme().DataGrid()
-                                                            .DataSource(ds => ds
-                                                        .Mvc()
-                                                        .Controller("IndexDEController")
-                                                        .Key("ID")
-                                                        .LoadAction("GetMovies2")
-                                                    //.InsertAction("InsertMovie")
-                                                    //.UpdateAction("UpdateMovie")
-                                                    //.DeleteAction("DeleteMovie")
-                                                    )
+                                                                .DataSource(ds => ds
+                                                            .Mvc()
+                                                            .Controller("IndexDEController")
+                                                            .Key("ID")
+                                                            .LoadAction("GetMovies2")
+                                                        //.InsertAction("InsertMovie")
+                                                        //.UpdateAction("UpdateMovie")
+                                                        //.DeleteAction("DeleteMovie")
+                                                        )
 )
 
 @(Html.DevExtreme().DataGrid<RazorPagesMovie.Models.RandomExample>()
-                                            .Columns(columns =>
-                                            {
-                                                columns.AddFor(re => re.userId);
-                                                columns.AddFor(re => re.id);
-                                                columns.AddFor(re => re.title);
-                                                columns.AddFor(re => re.body);
-                                            })
-                                            .DataSource(ds => ds
-                        .StaticJson()
-                        .Url("https://jsonplaceholder.typicode.com/posts")
-                    )
+                                                .Columns(columns =>
+                                                {
+                                                    columns.AddFor(re => re.userId);
+                                                    columns.AddFor(re => re.id);
+                                                    columns.AddFor(re => re.title);
+                                                    columns.AddFor(re => re.body);
+                                                })
+                                                .DataSource(ds => ds
+                            .StaticJson()
+                            .Url("https://jsonplaceholder.typicode.com/posts")
+                        )
 )
 
 @(Html.DevExtreme().DataGrid<RazorPagesMovie.Models.RandomExample>()
-                                            .Columns(columns =>
-                                            {
-                                                columns.AddFor(re => re.userId);
-                                                columns.AddFor(re => re.id);
-                                                columns.AddFor(re => re.title);
-                                                columns.AddFor(re => re.body);
-                                            })
-                                            .DataSource("https://jsonplaceholder.typicode.com/posts")
+                                                .Columns(columns =>
+                                                {
+                                                    columns.AddFor(re => re.userId);
+                                                    columns.AddFor(re => re.id);
+                                                    columns.AddFor(re => re.title);
+                                                    columns.AddFor(re => re.body);
+                                                })
+                                                .DataSource("https://jsonplaceholder.typicode.com/posts")
 )
 
 @(Html.DevExtreme().DataGrid<RazorPagesMovie.Models.RandomExample>()
-                                            .Columns(columns =>
-                                            {
-                                                columns.AddFor(re => re.userId);
-                                                columns.AddFor(re => re.id);
-                                                columns.AddFor(re => re.title);
-                                                columns.AddFor(re => re.body);
-                                            })
-                                            .DataSource("https://jsonplaceholder.typicode.com/posts", "id")
+                                                .Columns(columns =>
+                                                {
+                                                    columns.AddFor(re => re.userId);
+                                                    columns.AddFor(re => re.id);
+                                                    columns.AddFor(re => re.title);
+                                                    columns.AddFor(re => re.body);
+                                                })
+                                                .DataSource("https://jsonplaceholder.typicode.com/posts", "id")
 )
 
 @(Html.DevExtreme().DataGrid<RazorPagesMovie.Models.DrawFromAbmc>
-        ()
-        .Columns(columns =>
-        {
-            columns.AddFor(d => d.TrimbleItemId);
-            columns.AddFor(d => d.Name);
-            columns.AddFor(d => d.FittingCategory);
-            columns.AddFor(d => d.FittingType);
-            columns.AddFor(d => d.ContributorItemDetail1ContributorId);
-            columns.AddFor(d => d.ContributorItemDetail1Id);
-            columns.AddFor(d => d.ContributorItemDetail1InsulationThickness);
-            columns.AddFor(d => d.ContributorItemDetail1LinerThickness);
-            columns.AddFor(d => d.ContributorItemDetail1LocationX);
-            columns.AddFor(d => d.ContributorItemDetail1LocationY);
-            columns.AddFor(d => d.ContributorItemDetail1LocationZ);
-            columns.AddFor(d => d.ContributorItemDetail1ModelChangeChangeId);
-            columns.AddFor(d => d.ContributorItemDetail1ModelChangeId);
-            columns.AddFor(d => d.ContributorItemDetail1ModelChangeTimeOfChange);
-            columns.AddFor(d => d.ContributorItemDetail1ModelChangeUserSessionId);
-            columns.AddFor(d => d.ContributorItemDetail1ModelChangeVersion);
-            columns.AddFor(d => d.ContributorItemDetail1PricingDiscountMultiplier);
-            columns.AddFor(d => d.ContributorItemDetail1PricingPikcCode);
-            columns.AddFor(d => d.ContributorItemDetail1PricingPrice);
-            columns.AddFor(d => d.ContributorItemDetail1PricingPriceCode);
-            columns.AddFor(d => d.ContributorItemDetail1PricingQuantity);
-            columns.AddFor(d => d.ContributorItemDetail1PricingTotalLaborCost);
-            columns.AddFor(d => d.ContributorItemDetail1PricingTotalLaborHours);
-            columns.AddFor(d => d.ContributorItemDetail1PricingUpcCode);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesTakeOffLineNum);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesMetric);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesAuditTrailID);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesAttachedToID);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesIsAttachedFrom);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesVertical);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesX);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesY);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesPipeX);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesPipeY);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesSizeStrPropane);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesDrawingDrawing);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesAlternate);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesZone);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesSymbol);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesLine);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesReportCat);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesSpec);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesMaterialName);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesWeight);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesTradeFitters);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesLocation);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborField);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborField_x0020__x0020_Shop);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborShop);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborField_x0020_Mat_x0020_Handling0);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborShop_x0020_Mat_x0020_Handling0);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborField_x0020_Mat_x0020_No_x0020_shop0);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborLabor_x0020_Cat_x0020_70);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborLabor_x0020_Cat_x0020_80);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingDiscountMultiplier1);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingPikcCode);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingPrice);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingPriceCode);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingQuantity);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingTotalLaborCost);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingTotalLaborHours);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingUpcCode);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesScopesSystem);
-            columns.AddFor(d => d.ContributorItemDetail1PropertiesScopesFloor);
-            columns.AddFor(d => d.ContributorItemDetail1ScopesSystem);
-            columns.AddFor(d => d.ContributorItemDetail1ScopesFloor);
-            columns.AddFor(d => d.ContributorItemDetail1TypeOfChange);
-            columns.AddFor(d => d.ContributorItemDetail1Units);
-            columns.AddFor(d => d.Version);
-        })
-        .DataSource("https://www.jasonbase.com/things/jWne.json", "TrimbleItemId")
-        //.Scrolling(scrolling => scrolling.Mode(GridScrollingMode.Infinite))
-        .ColumnChooser(c => c.Enabled(true))
-        .AllowColumnReordering(true)
-    .AllowColumnResizing(true)
-    .ColumnAutoWidth(true)
-    .Option("columnResizingMode", "widget")
-    .Option("showColumnLines", true)
-    .Option("showRowLines", true)
-    .Option("showRowBorders", true)
-    .Option("rowAlternationEnabled", true)
+            ()
+            .Columns(columns =>
+            {
+                columns.AddFor(d => d.TrimbleItemId);
+                columns.AddFor(d => d.Name);
+                columns.AddFor(d => d.FittingCategory);
+                columns.AddFor(d => d.FittingType);
+                columns.AddFor(d => d.ContributorItemDetail1ContributorId);
+                columns.AddFor(d => d.ContributorItemDetail1Id);
+                columns.AddFor(d => d.ContributorItemDetail1InsulationThickness);
+                columns.AddFor(d => d.ContributorItemDetail1LinerThickness);
+                columns.AddFor(d => d.ContributorItemDetail1LocationX);
+                columns.AddFor(d => d.ContributorItemDetail1LocationY);
+                columns.AddFor(d => d.ContributorItemDetail1LocationZ);
+                columns.AddFor(d => d.ContributorItemDetail1ModelChangeChangeId);
+                columns.AddFor(d => d.ContributorItemDetail1ModelChangeId);
+                columns.AddFor(d => d.ContributorItemDetail1ModelChangeTimeOfChange);
+                columns.AddFor(d => d.ContributorItemDetail1ModelChangeUserSessionId);
+                columns.AddFor(d => d.ContributorItemDetail1ModelChangeVersion);
+                columns.AddFor(d => d.ContributorItemDetail1PricingDiscountMultiplier);
+                columns.AddFor(d => d.ContributorItemDetail1PricingPikcCode);
+                columns.AddFor(d => d.ContributorItemDetail1PricingPrice);
+                columns.AddFor(d => d.ContributorItemDetail1PricingPriceCode);
+                columns.AddFor(d => d.ContributorItemDetail1PricingQuantity);
+                columns.AddFor(d => d.ContributorItemDetail1PricingTotalLaborCost);
+                columns.AddFor(d => d.ContributorItemDetail1PricingTotalLaborHours);
+                columns.AddFor(d => d.ContributorItemDetail1PricingUpcCode);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesTakeOffLineNum);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesMetric);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesAuditTrailID);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesAttachedToID);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesIsAttachedFrom);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesVertical);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesX);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesY);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesPipeX);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesPipeY);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesSizeStrPropane);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesDrawingDrawing);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesAlternate);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesZone);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesSymbol);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesLine);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesReportCat);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesSpec);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesMaterialName);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesWeight);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesTradeFitters);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesLocation);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborField);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborField_x0020__x0020_Shop);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborShop);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborField_x0020_Mat_x0020_Handling0);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborShop_x0020_Mat_x0020_Handling0);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborField_x0020_Mat_x0020_No_x0020_shop0);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborLabor_x0020_Cat_x0020_70);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborLabor_x0020_Cat_x0020_80);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingDiscountMultiplier1);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingPikcCode);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingPrice);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingPriceCode);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingQuantity);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingTotalLaborCost);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingTotalLaborHours);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingUpcCode);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesScopesSystem);
+                columns.AddFor(d => d.ContributorItemDetail1PropertiesScopesFloor);
+                columns.AddFor(d => d.ContributorItemDetail1ScopesSystem);
+                columns.AddFor(d => d.ContributorItemDetail1ScopesFloor);
+                columns.AddFor(d => d.ContributorItemDetail1TypeOfChange);
+                columns.AddFor(d => d.ContributorItemDetail1Units);
+                columns.AddFor(d => d.Version);
+            })
+            .DataSource("https://www.jasonbase.com/things/jWne.json", "TrimbleItemId")
+            //As is ABMC Data Source
+            //https://www.jasonbase.com/things/2dqn.json
+            //Edit As is Data Source
+            //https://www.jasonbase.com/things/2dqn/edit#
+            //Flat ABMC Data Source
+            //https://www.jasonbase.com/things/jWne.json
+            //Edit Flat Data Source
+            //https://www.jasonbase.com/things/jWne/edit#
+            //.Scrolling(scrolling => scrolling.Mode(GridScrollingMode.Infinite))
+            .ColumnChooser(c => c.Enabled(true))
+            .AllowColumnReordering(true)
+        .AllowColumnResizing(true)
+        .ColumnAutoWidth(true)
+        .Option("columnResizingMode", "widget")
+        .Option("showColumnLines", true)
+        .Option("showRowLines", true)
+        .Option("showRowBorders", true)
+        .Option("rowAlternationEnabled", true)
 )
 

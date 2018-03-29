@@ -15,12 +15,6 @@ namespace RazorPagesMovie
 
         public static void Main(string[] args)
         {
-            using (System.IO.StreamReader r = new System.IO.StreamReader("C:/Users/amarsni/source/repos/RazPgsMovDevExMVC/RazorPagesMovie/Pages/Movies/DrawFromAbmc_e94058_1.json"))
-            {
-                IndexDEController.jsonAbmc = r.ReadToEnd();
-
-            }
-
             var host = BuildWebHost(args);
 
             using (var scope = host.Services.CreateScope())

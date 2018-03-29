@@ -60,8 +60,20 @@
                     <li><a asp-page="/Schedules/Index">Schedules</a></li>
                     <li><a asp-page="/About">About</a></li>
                     <li><a asp-page="/Contact">Contact</a></li>
-                    <li><a asp-page="/Movies/Index">RpMovie</a></li>
-                    <li><a asp-page="/Movies/IndexDE">RpMovieDE</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" area-expanded="false">Tables</a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a asp-page="/Movies/Index">Rp Movie</a></li>
+                            <li><a asp-page="/Movies/IndexDE">Rp Movie DE Stat List</a></li>
+                            <li><a asp-page="#">Rp Movie DE Cust Method</a></li>
+                            <li><a asp-page="#">Rp Random Json Data DE Ex 1</a></li>
+                            <li><a asp-page="#">Rp Random Json Data DE Ex 2</a></li>
+                            <li><a asp-page="#">Rp Random Json Data DE Ex 3</a></li>
+                            <li><a asp-page="#">Rp Abmc DE Flat</a></li>
+                            <li><a asp-page="#">Rp Abmc DE AsIs</a></li>
+                            <li><a asp-page="#">Blank</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
