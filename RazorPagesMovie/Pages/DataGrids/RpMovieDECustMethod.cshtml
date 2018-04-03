@@ -1,10 +1,10 @@
 ﻿@page
 @model RazorPagesMovie.Pages.Movies.RpMovieDECustMethodModel
 @{
-    ViewData["Title"] = "RpMovieDECustMethod";
+    ViewData["Title"] = "Razor Pages Movie - DevExtreme Custom Method";
 }
 
-<h2>Razor Page</h2>
+<h2>Razor Page Movie - DevExtreme Custom Method</h2>
 <h4>Data Source: Local Movie DB</h4>
 <h4>
     Data Access Method:
@@ -21,18 +21,19 @@
     )
     <br />
 </h4>
+<br />
 <h4>Display: Dev Extreme Data Grid</h4>
 <h4>Other Info: None</h4>
 <br /> <br />
 
 @(Html.DevExtreme().DataGrid()
-                                                                            .DataSource(ds => ds
-                                                                        .Mvc()
-                                                                        .Controller("IndexDEController")
-                                                                        .Key("ID")
-                                                                        .LoadAction("GetMovies2")
-                                                                        .InsertAction("InsertMovie")
-                                                                        .UpdateAction("UpdateMovie")
-                                                                        .DeleteAction("DeleteMovie")
-                                                                    )
+                                                                                .DataSource(ds => ds
+                                                                            .Mvc()
+                                                                            .Controller("RpMovieDEStatListController")
+                                                                            .Key("ID")
+                                                                            .LoadAction("GetMovies2")
+                                                                            .InsertAction("InsertMovie")
+                                                                            .UpdateAction("UpdateMovie")
+                                                                            .DeleteAction("DeleteMovie")
+                                                                        )
 )   

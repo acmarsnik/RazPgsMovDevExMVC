@@ -15,7 +15,7 @@ using System.Xml;
 
 namespace RazorPagesMovie.Pages.Movies
 {
-    public class IndexDEController : Microsoft.AspNetCore.Mvc.Controller
+    public class RpMovieDEStatListController : Microsoft.AspNetCore.Mvc.Controller
     {
         //Creating Static List of Movies
         public static List<Movie> movies { get; set; } = new List<Movie> {

@@ -1,20 +1,30 @@
 ﻿@page
 @model RazorPagesMovie.Pages.DataGrids.RpRandomJsonDataDEEx2DGModel
 @{
-    ViewData["Title"] = "RpRandomJsonDataDEEx2DG";
+    ViewData["Title"] = "Razor Pages Random- DevExtreme Data Grid Example 2";
 }
 
-<h2>RpRandomJsonDataDEEx2DG</h2>
+<h2>"Razor Pages Random- DevExtreme Data Grid Example 2</h2>
+<h4>Data Source: <a href="https://jsonplaceholder.typicode.com/posts" target="_blank">https://jsonplaceholder.typicode.com/posts</a> </h4>
+<h4>
+    Data Access Method:
+    <br /> <br />
+    .DataSource("https://jsonplaceholder.typicode.com/posts")
+    <br />
+</h4>
+<br />
+<h4>Display: Dev Extreme Data Grid</h4>
+<h4>Other Info: None</h4>
 <br /> <br />
 
 
 @(Html.DevExtreme().DataGrid<RazorPagesMovie.Models.RandomExample>()
-                                                        .Columns(columns =>
-                                                        {
-                                                            columns.AddFor(re => re.userId);
-                                                            columns.AddFor(re => re.id);
-                                                            columns.AddFor(re => re.title);
-                                                            columns.AddFor(re => re.body);
-                                                        })
-                                                        .DataSource("https://jsonplaceholder.typicode.com/posts")
+                                                            .Columns(columns =>
+                                                            {
+                                                                columns.AddFor(re => re.userId);
+                                                                columns.AddFor(re => re.id);
+                                                                columns.AddFor(re => re.title);
+                                                                columns.AddFor(re => re.body);
+                                                            })
+                                                            .DataSource("https://jsonplaceholder.typicode.com/posts")
 )
