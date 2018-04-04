@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace RazorPagesMovie.Models
+{
+    public class ConnectionDirection
+    {
+        public int x;
+        public int y;
+        public int z;
+    }
+}

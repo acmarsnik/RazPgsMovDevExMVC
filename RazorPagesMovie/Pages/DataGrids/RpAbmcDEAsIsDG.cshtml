@@ -17,90 +17,28 @@
 <h4>Other Info: None</h4>
 <br /> <br />
 
-@(Html.DevExtreme().DataGrid<RazorPagesMovie.Models.DrawFromAbmc>
-                        ()
-                        .Columns(columns =>
-                        {
-                            columns.AddFor(d => d.TrimbleItemId);
-                            columns.AddFor(d => d.Name);
-                            columns.AddFor(d => d.FittingCategory);
-                            columns.AddFor(d => d.FittingType);
-                            columns.AddFor(d => d.ContributorItemDetail1ContributorId);
-                            columns.AddFor(d => d.ContributorItemDetail1Id);
-                            columns.AddFor(d => d.ContributorItemDetail1InsulationThickness);
-                            columns.AddFor(d => d.ContributorItemDetail1LinerThickness);
-                            columns.AddFor(d => d.ContributorItemDetail1LocationX);
-                            columns.AddFor(d => d.ContributorItemDetail1LocationY);
-                            columns.AddFor(d => d.ContributorItemDetail1LocationZ);
-                            columns.AddFor(d => d.ContributorItemDetail1ModelChangeChangeId);
-                            columns.AddFor(d => d.ContributorItemDetail1ModelChangeId);
-                            columns.AddFor(d => d.ContributorItemDetail1ModelChangeTimeOfChange);
-                            columns.AddFor(d => d.ContributorItemDetail1ModelChangeUserSessionId);
-                            columns.AddFor(d => d.ContributorItemDetail1ModelChangeVersion);
-                            columns.AddFor(d => d.ContributorItemDetail1PricingDiscountMultiplier);
-                            columns.AddFor(d => d.ContributorItemDetail1PricingPikcCode);
-                            columns.AddFor(d => d.ContributorItemDetail1PricingPrice);
-                            columns.AddFor(d => d.ContributorItemDetail1PricingPriceCode);
-                            columns.AddFor(d => d.ContributorItemDetail1PricingQuantity);
-                            columns.AddFor(d => d.ContributorItemDetail1PricingTotalLaborCost);
-                            columns.AddFor(d => d.ContributorItemDetail1PricingTotalLaborHours);
-                            columns.AddFor(d => d.ContributorItemDetail1PricingUpcCode);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesTakeOffLineNum);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesMetric);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesAuditTrailID);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesAttachedToID);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesIsAttachedFrom);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesVertical);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesX);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesY);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesPipeX);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesPipeY);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesSizeStrPropane);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesDrawingDrawing);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesAlternate);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesZone);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesSymbol);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesLine);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesReportCat);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesSpec);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesMaterialName);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesWeight);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesTradeFitters);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesLocation);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborField);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborField_x0020__x0020_Shop);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborShop);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborField_x0020_Mat_x0020_Handling0);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborShop_x0020_Mat_x0020_Handling0);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborField_x0020_Mat_x0020_No_x0020_shop0);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborLabor_x0020_Cat_x0020_70);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesLaborLabor_x0020_Cat_x0020_80);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingDiscountMultiplier1);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingPikcCode);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingPrice);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingPriceCode);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingQuantity);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingTotalLaborCost);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingTotalLaborHours);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesPricingUpcCode);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesScopesSystem);
-                            columns.AddFor(d => d.ContributorItemDetail1PropertiesScopesFloor);
-                            columns.AddFor(d => d.ContributorItemDetail1ScopesSystem);
-                            columns.AddFor(d => d.ContributorItemDetail1ScopesFloor);
-                            columns.AddFor(d => d.ContributorItemDetail1TypeOfChange);
-                            columns.AddFor(d => d.ContributorItemDetail1Units);
-                            columns.AddFor(d => d.Version);
-                        })
-                        .DataSource("https://www.jasonbase.com/things/2dqn.json", "TrimbleItemId")
-                        .ColumnChooser(c => c.Enabled(true))
-                        .AllowColumnReordering(true)
-                        .AllowColumnResizing(true)
-                        .ColumnAutoWidth(true)
-                        .Option("columnResizingMode", "widget")
-                        .Option("showColumnLines", true)
-                        .Option("showRowLines", true)
-                        .Option("showRowBorders", true)
-                        .Option("rowAlternationEnabled", true)
+@(Html.DevExtreme().DataGrid<RazorPagesMovie.Models.ContributorItemDetails>
+                            ()
+                            .Columns(columns =>
+                            {
+                                columns.AddFor(c => c.contributorItemDetails);
+                                columns.AddFor(c => c.fittingCategory);
+                                columns.AddFor(c => c.fittingType);
+                                columns.AddFor(c => c.name);
+                                columns.AddFor(c => c.trimbleAssemblyItemId);
+                                columns.AddFor(c => c.trimbleItemId);
+                                columns.AddFor(c => c.version);
+                            })
+                            .DataSource("https://www.jasonbase.com/things/2dqn.json")
+                            .ColumnChooser(c => c.Enabled(true))
+                            .AllowColumnReordering(true)
+                            .AllowColumnResizing(true)
+                            .ColumnAutoWidth(true)
+                            .Option("columnResizingMode", "widget")
+                            .Option("showColumnLines", true)
+                            .Option("showRowLines", true)
+                            .Option("showRowBorders", true)
+                            .Option("rowAlternationEnabled", true)
 
     //Uncomment to turn infinite scrolling on
     //.Scrolling(scrolling => scrolling.Mode(GridScrollingMode.Infinite))
@@ -111,3 +49,130 @@
     //Edit As is Data Source
     //https://www.jasonbase.com/things/2dqn/edit#
 )
+
+@(Html.DevExtreme().DataGrid<RazorPagesMovie.Models.ContributorItemDetails>
+                            ()
+                            .Columns(columns =>
+                            {
+                                columns.AddFor(c => c.contributorItemDetails);
+                                columns.AddFor(c => c.fittingCategory);
+                                columns.AddFor(c => c.fittingType);
+                                columns.AddFor(c => c.name);
+                                columns.AddFor(c => c.trimbleAssemblyItemId);
+                                columns.AddFor(c => c.trimbleItemId);
+                                columns.AddFor(c => c.version);
+                            })
+                            .DataSource("https://www.jasonbase.com/things/2dqn.json")
+                            .ColumnChooser(c => c.Enabled(true))
+                            .AllowColumnReordering(true)
+                            .AllowColumnResizing(true)
+                            .ColumnAutoWidth(true)
+                            .Option("columnResizingMode", "widget")
+                            .Option("showColumnLines", true)
+                            .Option("showRowLines", true)
+                            .Option("showRowBorders", true)
+                            .Option("rowAlternationEnabled", true)
+        .MasterDetail(m => m
+            .Enabled(true)
+            .Template(new TemplateName("gridContainer-details"))
+        )
+)
+
+@using (Html.DevExtreme().NamedTemplate("gridContainer-details"))
+{
+    @(Html.DevExtreme().TabPanel()
+                .FocusStateEnabled(false)
+                .ElementAttr("class", "tabPanel-orders")
+                .Items(items =>
+                {
+                    items.Add()
+                        .Title("Connections")
+                        .Template(new TemplateName("gridContainer-details-tab1Template"))
+                        .Option("tabExtras", new { connectionID = new JS("data.SupplierID") });
+
+                    items.Add()
+                        .Title("Contributor ID")
+                        .Template(new TemplateName("gridContainer-details-tab2Template"))
+                        .Option("tabExtras", new JS("data"));
+                })
+    )
+}
+
+@using (Html.DevExtreme().NamedTemplate("gridContainer-details-tab1Template"))
+{
+    @(Html.DevExtreme().Form()
+                .ElementAttr("class", "form-container")
+                .FormData(new JS("tabExtras"))
+                .LabelLocation(FormLabelLocation.Top)
+                .Items(items =>
+                {
+                    items.AddSimple()
+                        .Template(new TemplateName("gridContainer-details-tab1-gridTemplate"));
+                })
+    )
+}
+
+@using (Html.DevExtreme().NamedTemplate("gridContainer-details-tab1Template"))
+{
+    @(Html.DevExtreme().DataGrid()
+                .ID(new JS("'gridContainer-orderHistoryGrid-' + component.option('formData').supplierID"))
+                .ShowBorders(true)
+                .DataSource("https://www.jasonbase.com/things/2dqn.json")
+                .Paging(p => p.PageSize(5))
+                .Columns(columns =>
+                {
+                    columns.Add().DataField("ConnectedTo");
+                    columns.Add().DataField("ConnectionDirection");
+                    columns.Add().DataField("ConnctionID");
+                    columns.Add().DataField("ConnectionOtherDirection");
+                    columns.Add().DataField("Diameter");
+                    columns.Add().DataField("Discipline");
+                    columns.Add().DataField("Flow");
+                    columns.Add().DataField("Height");
+                    columns.Add().DataField("Inset");
+                    columns.Add().DataField("IsConnected");
+                    columns.Add().DataField("Location");
+                    columns.Add().DataField("Properties");
+                    columns.Add().DataField("Shape");
+                    columns.Add().DataField("Slope");
+                    columns.Add().DataField("System");
+                    columns.Add().DataField("Width");
+                })
+                .Summary(s => s
+                    .TotalItems(totalItems =>
+                    {
+                        totalItems.Add()
+                            .Column("UnitPrice")
+                            .SummaryType(SummaryType.Sum)
+                            .ValueFormat(f => f
+                                .Currency("USD")
+                                .Precision(2)
+                            );
+
+                        totalItems.Add()
+                            .Column("Quantity")
+                            .SummaryType(SummaryType.Count);
+                    })
+                )
+    )
+}
+
+@using (Html.DevExtreme().NamedTemplate("gridContainer-details-tab2Template"))
+{
+    var formItemTemplate = "<%= editorOptions.value %>";
+
+    @(Html.DevExtreme().Form()
+                .ElementAttr("class", "address-form form-container")
+                .FormData(new JS("tabExtras"))
+                .ColCount(2)
+                .Items(items =>
+                {
+                    items.AddSimple().DataField("Address").Template(formItemTemplate);
+                    items.AddSimple().DataField("City").Template(formItemTemplate);
+                    items.AddSimple().DataField("Region").Template(formItemTemplate);
+                    items.AddSimple().DataField("PostalCode").Template(formItemTemplate);
+                    items.AddSimple().DataField("Country").Template(formItemTemplate);
+                    items.AddSimple().DataField("Phone").Template(formItemTemplate);
+                })
+    )
+}

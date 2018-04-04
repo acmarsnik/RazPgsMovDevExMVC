@@ -1,7 +1,7 @@
 ﻿@page
-@model RazorPagesMovie.Pages.DataGrids.RpAbmcDEFlatDGModel
+@model RazorPagesMovie.Pages.DataGrids.RpAbmcDEFlatDGController
 @{
-    ViewData["Title"] = "RRazor Page AutoBid Mechanical - DevExtreme Flat Data Grid";
+    ViewData["Title"] = "Razor Page AutoBid Mechanical - DevExtreme Flat Data Grid";
 }
 
 <h2>Razor Page AutoBid Mechanical - DevExtreme Flat Data Grid</h2>
@@ -19,6 +19,20 @@
 
 @(Html.DevExtreme().DataGrid<RazorPagesMovie.Models.DrawFromAbmc>
                         ()
+                        .ID("gridContainer")
+                        .DataSource("https://www.jasonbase.com/things/jWne.json")
+                        .ColumnChooser(c => c.Enabled(true))
+                        .AllowColumnReordering(true)
+                        .AllowColumnResizing(true)
+                        .ColumnAutoWidth(true)
+                        .Option("columnResizingMode", "widget")
+                        .Option("showColumnLines", true)
+                        .Option("showRowLines", true)
+                        .Option("showRowBorders", true)
+                        .Option("rowAlternationEnabled", true)
+                        .Selection(s => s.Mode(SelectionMode.Multiple))
+                        .Export(e => e.Enabled(true).FileName("Abmc").AllowExportSelectedData(true))
+                        .GroupPanel(p => p.Visible(true))
                         .Columns(columns =>
                         {
                             columns.AddFor(d => d.TrimbleItemId);
@@ -91,16 +105,7 @@
                             columns.AddFor(d => d.ContributorItemDetail1Units);
                             columns.AddFor(d => d.Version);
                         })
-                        .DataSource("https://www.jasonbase.com/things/jWne.json", "TrimbleItemId")
-                        .ColumnChooser(c => c.Enabled(true))
-                        .AllowColumnReordering(true)
-                        .AllowColumnResizing(true)
-                        .ColumnAutoWidth(true)
-                        .Option("columnResizingMode", "widget")
-                        .Option("showColumnLines", true)
-                        .Option("showRowLines", true)
-                        .Option("showRowBorders", true)
-                        .Option("rowAlternationEnabled", true)
+                        
 
     //Uncomment to turn infinite scrolling on
     //.Scrolling(scrolling => scrolling.Mode(GridScrollingMode.Infinite))

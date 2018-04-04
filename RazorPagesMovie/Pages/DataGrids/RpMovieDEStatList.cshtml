@@ -17,6 +17,8 @@
 <br /> <br />
 
 @(Html.DevExtreme().DataGrid<RazorPagesMovie.Models.Movie>()
+        .DataSource(RazorPagesMovie.Pages.Movies.RpMovieDEStatListController.movies)
+        .Export(e => e.Enabled(true).FileName("DrawFromAbmc").AllowExportSelectedData(true))
                                                         .Columns(columns =>
                                                         {
                                                             columns.AddFor(m => m.ID);
@@ -26,7 +28,7 @@
                                                             columns.AddFor(m => m.Genre);
                                                             columns.AddFor(m => m.Rating);
                                                         })
-                                                        .DataSource(RazorPagesMovie.Pages.Movies.RpMovieDEStatListController.movies)
+                                                        
 )
 
 
